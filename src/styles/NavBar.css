@@ -1,0 +1,16 @@
+
+.navbar-brand img{
+    width: 90px;
+    height: 90px;
+}
+li:hover{
+    border-bottom: 2px solid #000;
+    opacity: 0.5;
+}
+.navbar-brand img:hover{
+    opacity: 0.5;
+}
+
+li:hover:first-letter{
+    color:#B983FF;
+  }
