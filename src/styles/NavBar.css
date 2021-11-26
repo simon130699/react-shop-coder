@@ -7,10 +7,28 @@ li:hover{
     border-bottom: 2px solid #000;
     opacity: 0.5;
 }
-.navbar-brand img:hover{
+a:hover{
     opacity: 0.5;
+    color:#B983FF;
+    
 }
 
 li:hover:first-letter{
     color:#B983FF;
   }
+
+  i{
+      font-size: 30px;
+
+  }
+  i:hover{
+      color:#B983FF;
+      opacity: 0.5;
+  }
+
+  h3{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size:30px !important;
+  }
+ 
