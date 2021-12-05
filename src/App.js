@@ -5,7 +5,7 @@ import { } from './styles/App.css'
 
 function App() {
 
-  const greet= 'soy un string que viene de app.js';
+  const greet= '';
  
 
   return (
@@ -13,6 +13,7 @@ function App() {
         <NavBar />
 
         <ItemListContainer greeting={greet} />
+        
     </div>
   );
 }
