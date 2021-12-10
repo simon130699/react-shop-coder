@@ -1,13 +1,13 @@
 import React from "react";
 import {} from "../styles/NavBar.css";
 import { CartWidget } from "./CartWidget";
+// import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    < div className="Navbar row pt-2">
+    <div className="Navbar row pt-2">
       <div className="navbar navbar-expand-lg navbar-light  col-6 ">
         <div className="container-fluid">
-          
           <button
             className="navbar-toggler"
             type="button"
@@ -98,10 +98,13 @@ const NavBar = () => {
 
       <div className=" col-2   ">
         <i className="pb-3 mx-auto">
-          <CartWidget />
+            
+              <CartWidget />
+            
+          
         </i>
       </div>
-      </div>
+    </div>
   );
 };
 export default NavBar;
