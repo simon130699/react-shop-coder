@@ -3,3 +3,13 @@
     
     border: 0px solid red;
 }
+.btn:hover{
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+    width:100%;
+}
+
+
+
+

@@ -1,19 +1,27 @@
 import React,{useState, useEffect} from 'react';
-import {getOneProduct} from '../helpers/getOneProduct';
+import { useParams } from 'react-router-dom';
 import { ItemDetail } from './ItemDetail';
+import {getFetch} from '../helpers/getFetch';
+import { ItemCount } from './ItemCount';
 
 
 export const ItemDetailCointainer = () => {
+  const [producto, setProducto] = useState(null);
+  const {id} = useParams();
 
-    const [item, setItem] = useState({});
 
-    useEffect(() => {
+  useEffect(() => {
+      getFetch
+      .then(resp => setProducto(resp.find(prod => prod.id === parseInt(id))))
+      .catch(err => console.log(err))   
+}, [id]) 
 
-        getOneProduct
-          .then((resp) => setItem(resp))   
-      }, []);
 
     return (
-     <ItemDetail item={item} />
+      <> 
+      
+      <ItemDetail  {...producto}/>
+      <ItemCount stock={5} initial={1} />
+      </>
     )
 }

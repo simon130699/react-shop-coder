@@ -20,7 +20,7 @@ export const ItemCount = ({ stock, initial }) => {
         <>
           <div className="text-center container">
             <div className="col-12 mb-2">
-                Carritox
+                Carrito
             </div>
             <div className="col-12 mb-3 count">
               <button className="btn-1" onClick={() => incrementCount()} disabled={count === stock ? true : false}>+</button>
