@@ -1,5 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Cart from './components/Cart';
 import { Footer } from './components/footer/Footer';
 import { Header } from './components/header/Header';
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<ItemListContainer/>}/>
         <Route path="/categorias/:idCategorias" element={<ItemListContainer/>}/>
           <Route path="/detalle/:id" element={<ItemDetailCointainer/>}/> 
+          <Route path="/Carrito" element={<Cart />}/> 
       </Routes>
       <Footer />
      </BrowserRouter>

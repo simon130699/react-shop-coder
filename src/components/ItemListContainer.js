@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 // import { useParams} from 'react-router-dom';
 import { getFetch } from "../helpers/getFetch";
 import { ItemList } from "./ItemList/ItemList";
-// import { ItemCount } from "./ItemCount";
 import  Spinner  from "../helpers/Spinner";
 import { useParams } from "react-router-dom";
 
@@ -39,7 +38,6 @@ export const ItemListContainer = ({ greeting }) => {
       <h1>{greeting}</h1>
 
       {loading ? <Spinner/> : <ItemList productos={productos}/> }
-      {/* <ItemCount stock={5} initial={1}  /> */}
     </>
   );
 };

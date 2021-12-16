@@ -45,6 +45,14 @@ const NavBar = () => {
                   Sucursales
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/Carrito"
+                  className="nav-link active  mx-2"
+                  aria-current="page"
+                >
+                  Carrito
+                </Link>
+              </li>
               
               <li className="nav-item dropdown">
                 <Link to="categorias"

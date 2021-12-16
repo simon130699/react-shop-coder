@@ -1,3 +1,8 @@
+import { ItemCount } from "./ItemCount";
+import {useState} from 'react'
+import { Button } from "react-bootstrap";
+import {Link} from 'react-router-dom';
+
 
 export const ItemDetail = ({
   id,
@@ -9,14 +14,15 @@ export const ItemDetail = ({
   stock,
   sku,
 }) => {
-  // console.log(item)
-  // console.log(id);
-  // console.log(foto);
-  // console.log(nombre);
-  // console.log(categorias);
-  // console.log(description);
-  // console.log(price);
-  // console.log(stock);
+
+    const [cart, setCart] = useState(true);
+
+    const onAdd = (cantidad) => {
+      console.log(cantidad);
+      setCart(false)
+    }
+
+
   return (
     <div>
       <section className="py-5">
@@ -43,7 +49,7 @@ export const ItemDetail = ({
                   className="form-control text-center me-3"
                   id="inputQuantity"
                   type="num"
-                  defaultValue={1}
+                  defaultValue={stock}
                   style={{ maxWidth: "3rem" }}
                 />
                 <button
@@ -56,6 +62,18 @@ export const ItemDetail = ({
               </div>
             </div>
           </div>
+
+          {cart
+          ?
+           <ItemCount 
+          stock={stock} 
+          onAdd={onAdd}  /> 
+          : 
+          <Link to={'/Carrito'}>
+
+            <Button className="btn btn-secondary"> Compra finalizada ir al carrito </Button> 
+          </Link> }
+      
         </div>
       </section>
     </div>
