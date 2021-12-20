@@ -1,8 +1,8 @@
 import { ItemCount } from "./ItemCount";
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import { Button } from "react-bootstrap";
 import {Link} from 'react-router-dom';
-
+import { CartContext } from "../context/CartContext";
 
 export const ItemDetail = ({
   id,
@@ -14,14 +14,18 @@ export const ItemDetail = ({
   stock,
   sku,
 }) => {
+  
 
-    const [cart, setCart] = useState(true);
+  const  { AddToCart} = useContext(CartContext)
+  const [cart, setCart] = useState(true);
+  const item = {id, nombre, foto, categorias, description, price, stock, sku}
 
-    const onAdd = (cantidad) => {
-      console.log(cantidad);
+    const onAdd = (cant) => {
       setCart(false)
+      AddToCart({...item , cantidad: cant})
+      
+      console.log(item);
     }
-
 
   return (
     <div>

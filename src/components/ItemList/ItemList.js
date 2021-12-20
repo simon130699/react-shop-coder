@@ -1,11 +1,18 @@
-import React from "react";
+import React,{useContext} from "react";
+import { CartContext } from "../../context/CartContext";
+
 import { Item } from "../Item/Item";
 
-export const ItemList = ({productos}) => {
+
+
+export const ItemList = () => {
+
+  const {prod} = useContext(CartContext);
+
   return (
       <>
 
-      {productos.map((prod) => <Item prod={prod} /> ) }
+      {prod.map((prod) => <Item prod={prod} /> ) }
       </>
         
   );

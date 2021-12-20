@@ -1,4 +1,4 @@
-const products = [
+export const products = [
     {id: 1, nombre:'S20 FF', foto:'http://medias.musimundo.com/medias/00367048-142839-142839-01-142839-01.jpg-size300?context=bWFzdGVyfGltYWdlc3w0MjM4OHxpbWFnZS9qcGVnfGg3Ni9oMmQvMTAzMjEyMTgzMDYwNzgvMDAzNjcwNDgtMTQyODM5LTE0MjgzOV8wMS0xNDI4MzlfMDEuanBnX3NpemUzMDB8NDU0NWIxMzIzOWJiNTljNzYzY2Q2NjBkYjYxNDE3ODJiM2M3YTdjMDdjYTlmY2ExNTk3NTg1YjExNWNiMGM4Mg', categorias:'celulares',  description:'lorem ipsum 1',price: '$ 500', stock:'5', sku:'SKU: BST-498'},
     {id: 2, nombre:'A20 S',  foto:'https://http2.mlstatic.com/D_Q_NP_852458-MLA48270995220_112021-AB.jpg', categorias:'celulares', description:'lorem ipsum 2',price: '$ 1200', stock:'7', sku:'BST-497'},
     {id: 3, nombre:'Iphone',  foto:'https://www.macstation.com.ar/img/productos/small/2187-1.jpg', categorias:'celulares', description:'lorem ipsum 3',price: '$ 300', stock:'3', sku:'BST-496'},
@@ -12,6 +12,6 @@ const products = [
 export const getFetch = new Promise((res) =>{
     setTimeout(() => {
         res(products)
-    }, 
+    },2000 
     );
 })
